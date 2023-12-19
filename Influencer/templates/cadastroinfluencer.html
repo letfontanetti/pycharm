@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro de Influencer</title>
+    <link rel="stylesheet" href="static/influencer.css">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul id="messages" class="list-unstyled">
+                {% for message in messages %}
+                    <li class="alert alert-success">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+    {% endwith %}
+    <div class="influenciadores">
+      <div class="page-header">
+          <h1>Cadastro de Influencer</h1>
+      </div>
+      <form action="/criar" method="post">
+          <div class="form-group">
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="plataforma">Plataforma: </label>
+            <input type="text" id="plataforma" name="plataforma" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="seguidores">Seguidores: </label>
+            <input type="text" id="seguidores" name="seguidores" class="form-control">
+          </div>
+           <div class="form-group">
+            <label for="area">Área: </label>
+            <input type="text" id="area" name="area" class="form-control">
+          </div>
+          <button type="submit" name='salvar' class="btn btn-primary btn-salvar">Salvar</button>
+          <button type="submit" name='deslogar' class="btn btn-primary btn-deslogar">Deslogar</button>
+      </form>
+    </div>
+</body>
+</html>

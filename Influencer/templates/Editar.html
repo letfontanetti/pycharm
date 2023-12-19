@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="../static/influencer.css">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul id="messages" class="list-unstyled">
+                {% for message in messages %}
+                    <li class="alert alert-success">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+    {% endwith %}
+      <div class="influenciadores">
+          <div class="page-header">
+              <h1>{{ Titulo }}</h1>
+          </div>
+      <form action='/alterar' method="post">
+        <fieldset>
+          <div class="form-group">
+              <img src="https://s2-gshow.glbimg.com/QXwX6A5JDHEXUIsnhXiXlQJchK4=/0x0:1024x768/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/j/8/TvPCzHSS6gJgS1o1eTAw/virginia.png">
+          </div>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" class="form-control" value = {{influencer.nome}}>
+          </div>
+          <div class="form-group">
+            <label for="plataforma">Plataforma</label>
+            <input type="text" id="plataforma" name="plataforma" class="form-control" value = {{influencer.plataforma}} >
+          </div>
+          <div class="form-group">
+            <label for="seguidores">Seguidores</label>
+            <input type="text" id="seguidores" name="seguidores" class="form-control"value = {{influencer.seguidores}}>
+          </div>
+           <div class="form-group">
+            <label for="area">Área</label>
+            <input type="text" id="area" name="area" class="form-control"value = {{influencer.area}}>
+          </div>
+          <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
+        </fieldset>
+      </form>
+    </div>
+</body>
+</html>

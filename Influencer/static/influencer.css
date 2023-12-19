@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFE4E1;
+    text-align: center;
+    padding: 50px;
+}
+
+.influenciadores {
+    background-color: #FFC0CB;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(219,112,147);
+    display: inline-block;
+    margin: 20px;
+}
+
+img {
+    max-width: 200px;
+}
+
+.form-group{
+    background-color: #FFC0CB;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(219,112,147);
+    display: block;
+    margin: 10px;
+}
+
+.btn {
+    font-size: 15px;
+    margin: 0;
+    border: none;
+    border-radius: 30px;
+    background-color: #FF69B4;
+    padding: 5px;
+}
+
+.page-header{
+    font-size: 15px;
+}
+
+.form-control{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #FF69B4;
+
+}

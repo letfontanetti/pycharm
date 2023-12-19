@@ -1,0 +1,180 @@
+*{
+    font-family: 'Rubik', sans-serif;
+}
+
+:root{
+    --var-azulzinho: #E0FFFF;
+    --var-cianao: #006E6E;
+    --var-azulclaro: #B0E0E6;
+    --var-ciano: #008B8B;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*---------------------HEADER------------------------*/
+
+header{
+    background-image: url(../static/header1.png);
+    background-size: cover;
+    height: 100vh;
+    color: var(--var-ciano);
+    background-position-y: -130px;
+    background-repeat: no-repeat;
+
+}
+
+header a{
+    color: var(--var-azulclaro);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header a:hover{
+    color: var(--var-ciano);
+}
+
+header h1{
+    color: var(--var-cianao);
+
+}
+
+header h5{
+    color: var(--var-azulclaro);
+}
+.itens{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+
+}
+
+.info-header{
+    margin: 30px;
+    padding: 30px;
+    position: relative;
+    animation-duration: 1s;
+    animation-name: entrada;
+}
+
+.info-header button{
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--var-cianao);
+    padding: 8px;
+    color: var(--var-azulzinho);
+    width: 80px;
+    margin: 10px;
+}
+
+.info-header button:hover{
+    color: var(--var-azulclaro);
+}
+@media(max-width:640px){
+    .info-header{
+        padding: 0px;
+        margin: 0px !important;
+    }
+    .info-header h5{
+        font-size: 0.8em;
+    }
+}
+/*---------------------SERVIÇOS------------------------*/
+.titulo h2{
+    text-align: center;
+    color: var(--var-azulzinho);
+    margin: 12px;
+}
+
+.icones{
+    padding: 15px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.icones h5{
+    color: var(--var-azulzinho);
+    padding: 5px;
+}
+
+.icones p{
+    font-weight: 600;
+    color: var(--var-azulzinho);
+}
+
+.icones:hover{
+    transform: scale(1.1);
+}
+
+/*---------------------EQUIPE------------------------*/
+
+.equipe{
+    background-color: var(--var-cianao);
+    text-align: center;
+    color: var(--var-azulclaro);
+}
+
+.equipe h2{
+    margin: 10px;
+}
+
+.equipe img{
+    margin: 10px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.equipe button{
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--var-azulclaro);
+    padding: 8px;
+    color: var(--var-cianao);
+    width: 170px;
+    margin: 10px;
+    align-items: center;
+}
+
+
+
+/*---------------------EQUIPE------------------------*/
+.formulario1{
+    background-color: var(--var-cianao);
+    display: none;
+}
+
+.form-label{
+    color: #B0E0E6;
+}
+
+.btn-enviar{
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--var-azulclaro);
+    padding: 8px;
+    color: var(--var-cianao);
+    width: 170px;
+    margin: 10px;
+    align-items: center;
+}
+
+.dicas img{
+    padding: 0;
+    width: 100%;
+}
+
+
+@keyframes entrada {
+    0%{
+        right: 1200px;
+    }
+    100%{
+        right: 0px;
+    }
+}
